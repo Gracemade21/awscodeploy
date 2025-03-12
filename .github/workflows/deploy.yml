@@ -28,7 +28,7 @@ jobs:
 
       - name: Upload to S3
         run: |
-          aws s3 cp app.zip s3://codepipeline-us-east-1-918136379548/app.zip
+          aws s3 cp app.zip s3://codepipeline-us-east-1-918136379548/app.zip --sse aws:kms
 
       - name: Start CodePipeline
         run: |
